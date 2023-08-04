@@ -17,291 +17,730 @@
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7057/7057708.png">
 </head>
 <body>
-    <section class="box">
+    <section class="ticket-form">
         <div class="container">
-            <div class="r-box">
-                <div class="header">
-                    <div class="header-35">
-                        <div class="img-logo"></div><!-- img-logo -->
-                    </div><!-- header-35 -->
-                    <div class="header-35">
-                        <h2>Laudo de Socorro</h2>
-                        <h2>Acompanhado pelo cliente ou responsável</h2>
-                    </div><!-- header-35 -->
-                    <div class="header-30">
-                        <p>Nº Atendimento:</p>
-                        <p>Motorista:</p>
-                        <p>Viatura:</p>
-                        <p>Seguradora:</p>
-                    </div><!-- header-30-->
-                </div><!-- header -->
-                <div class="table-names">
-                    <div class="first-line">
-                        <div class="name-100">
-                            <p>Nome:</p>
-                        </div><!-- name-100 -->
-                    </div><!-- first-line -->
-                    <div class="second-line">
-                        <div class="name-25">
-                            <p>Placa:</p>
-                        </div><!-- name-25 -->
-                        <div class="name-25">
-                            <p>Marca:</p>
-                        </div><!-- name-25 -->
-                        <div class="name-25">
-                            <p>Ano/Modelo:</p>
-                        </div><!-- name-25 -->
-                        <div class="name-25">
-                            <p>Tipo:</p>
-                        </div><!-- name-25 -->
-                    </div><!-- second-line -->
-                    <div class="third-line">
-                        <div class="bname-25">
-                            <p>Cor:</p>
-                        </div><!-- bname-25 -->
-                        <div class="bname-25">
-                            <p>KM:</p>
-                        </div><!-- bname-25 -->
-                        <div class="contact-50">
-                            <p>Contato Local:</p>
-                        </div><!-- contact-50 -->
-                    </div><!-- third-line -->
-                    <div class="four-line">
-                        <div class="bname-100">
-                            <p>Localização do veículo:</p>
-                        </div><!-- name-100 -->
-                    </div><!-- four-line -->
-                    <div class="fifth-line">
-                        <div class="cname-100">
-                            <p>Local de destino:</p>
-                        </div><!-- name-100 -->
-                    </div><!-- fifth-line -->
-                </div><!-- table-names -->
-                <div class="equipments">
-                    <div class="equipments-info">
-                        <h2>Acessórios, Ferramentas e Som</h2>
-                    </div><!-- equipments-info -->
-                </div><!-- equipments -->
-                <div class="menu-f">
-                    <div class="menu-50">
-                        <div class="title-25">
-                            <h2>Existentes</h2>
-                            <p>Bancos diant.</p>
-                            <p>Bancos tras.</p>
+            <div class="input-full">
+                <div class="input-names">
+                    <h2>Motorista</h2>
+                    <input type="text" id="driverName" placeholder="Motorista" autocomplete="off" maxlength="15"/>
+                    <div class="input-100">
+                        <div class="input-50">
+                            <h2>Viatura</h2>
+                            <input type="text" id="drivercarName" placeholder="Veículo do Motorista" autocomplete="off" maxlength="15"/>
+                        </div><!-- input-50 -->
+                        <div class="input-50">
+                            <h2>Seguradora</h2>
+                            <input type="text" id="insureCar" placeholder="Seguradora" autocomplete="off" maxlength="15"/>
+                        </div><!-- input-50 -->
+                    </div><!-- input-100 -->
+                </div><!-- input-names -->
+                <div class="input-client">
+                    <div class="input-100">
+                        <div class="input-50">
+                            <h2>Nome do Cliente</h2>
+                            <input type="text" id="clientName" placeholder="Nome do Cliente" autocomplete="off" maxlength="60"/>
+                        </div><!-- input-50 -->
+                        <div class="input-50">
+                            <h2>CPF do Cliente</h2>
+                            <input type="text" id="clientCPF" placeholder="CPF do Cliente" autocomplete="off"/>
+                        </div><!-- input-50 -->
+                    </div><!-- input-100 -->
+                </div><!-- input-client -->
+                <div class="input-licence">
+                    <div class="input-100">
+                        <div class="input-50">
+                            <h2>Marca</h2>
+                            <input type="text" id="carMark" placeholder="Marca do Veículo" autocomplete="off" maxlength="15"/>
+                        </div><!-- input-50 -->
+                        <div class="input-50">
+                            <h2>Modelo</h2>
+                            <input type="text" id="carModel" placeholder="Modelo do Veículo" autocomplete="off" maxlength="15"/>
+                        </div><!-- input-50 -->
+                    </div><!-- input-100 -->
+                </div><!-- input-licence -->
+                <div class="input-km">
+                    <div class="input-100">
+                        <div class="input-50">
+                            <h2>Placa</h2>
+                            <input class="licence" type="text" id="carLicence" placeholder="Placa do Veículo" autocomplete="off"/>
+                        </div><!-- input-50 -->
+                        <div class="input-50">
+                            <h2>Tipo</h2>
+                            <input type="text" id="carType" placeholder="Tipo do Veículo" autocomplete="off"/>
+                        </div><!-- input-50 -->
+                    </div><!-- input-100 -->
+                </div><!-- input-km -->
+                <div class="input-address">
+                    <h2>Localização do Veículo</h2>
+                    <input type="text" id="carAddress" placeholder="Localização Atual do Veículo" autocomplete="off"/>
+                    <h2>Destino do Veículo</h2>
+                    <input type="text" id="carStop" placeholder="Destino para deixar o Veículo" autocomplete="off"/>
+                    <h2>Contato Local</h2>
+                    <input type="text" id="localContact" placeholder="Nome de alguém no local" autocomplete="off"/>
+                </div><!-- input-address -->
+                <div class="text-wrapper">
+                        <h2>Vistoria</h2>
+                        <h2>Existente?</h2>
+                        <h2>Condição</h2>
+                </div><!-- text-wrapper -->
+                <div class="wrapper-desc">
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Bancos Diant.</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="seatFront">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="seatFrontcheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Bancos Tras.</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="seatBack">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="seatBackcheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Chaves</p>
-                            <p>Obj porta-luvas</p>
-                            <p>Obj porta-malas</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="keys">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="keysCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Obj Porta-Luvas</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="gloveBox">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="gloveBoxcheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Obj Porta-Malas</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="trunk">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="trunkCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Prot. Cárter</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="crankcase">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="crankcaseCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Faróis de Milha</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="carLights">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="carLightscheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Frente Removível</p>
-                        </div><!-- title-25 -->
-                        <div class="title-12">
-                            <h2>Sim</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-12 -->
-                        <div class="title-12">
-                            <h2>Não</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-12 -->
-                        <div class="title-25">
-                            <h2>Avariado</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-25 -->
-                    </div><!-- menu-50 -->
-                    <div class="menu-50">
-                        <div class="title-25">
-                            <h2>Existentes</h2>
-                            <p>Extintor</p>
-                            <p>Console</p>
-                            <p>Tapetes</p>
-                            <p>Relógio</p>
-                            <p>Antena</p>
-                            <p>Rodas</p>
-                            <p>Calotas</p>
-                            <p>Porta Cd</p>
-                        </div><!-- title-25 -->
-                        <div class="title-12">
-                            <h2>Sim</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-12 -->
-                        <div class="title-12">
-                            <h2>Não</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-12 -->
-                        <div class="title-25">
-                            <h2>Avariado</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-25 -->
-                    </div><!-- menu-50 -->
-                </div><!-- menu-f -->
-                <div class="menu-f">
-                    <div class="menu-50">
-                        <div class="title-25">
-                            <h2>Existentes</h2>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="removeFront">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="removeFrontcheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Bagageiro</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="bagbag">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="bagbagCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Estepe</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="steppe">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="steppeCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Macaco</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="monkey">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="monkeyCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Triângulo</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="triangle">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="triangleCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Ferramentas</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="tools">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="toolsCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Insulfilm</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="insulfilm">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="insulfilmCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Cad. de Bebê</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="babychair">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="babychairCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Pneus Diant.</p>
-                        </div><!-- title-25 -->
-                        <div class="title-12">
-                            <h2>Sim</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-12 -->
-                        <div class="title-12">
-                            <h2>Não</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-12 -->
-                        <div class="title-25">
-                            <h2>Avariado</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-25 -->
-                    </div><!-- menu-50 -->
-                    <div class="menu-50">
-                        <div class="title-25">
-                            <h2>Existentes</h2>
-                            <p>Documentos</p>
-                            <p>Cd</p>
-                            <p>Dvd</p>
-                            <p>Toca-fitas</p>
-                            <p>Rádio</p>
-                            <p>Caixa Selada</p>
-                            <p>Módulo</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="tireFront">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="tireFrontcheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
                             <p>Pneus Tras.</p>
-                        </div><!-- title-25 -->
-                        <div class="title-12">
-                            <h2>Sim</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-12 -->
-                        <div class="title-12">
-                            <h2>Não</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-12 -->
-                        <div class="title-25">
-                            <h2>Avariado</h2>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                            <p>-</p>
-                        </div><!-- title-25 -->
-                    </div><!-- menu-50 -->
-                </div><!-- menu-f -->
-                <div class="damage-wrp">
-                    <div class="damages">
-                        <h2>Avarias</h2>
-                        <div class="damages-img"></div><!-- damages-img -->
-                    </div><!-- damages -->
-                    <div class="desc-obs">
-                        <h2>Importante</h2>
-                        <p>Declaro estar de acordo com o preenchimento 
-                        deste formulário e com o destino do meu veículo. 
-                        Declaro ainda ter retirado do interior do veículo 
-                        todos os bens e valores pessoais não integrados 
-                        ao automóvel. A EstetPARK fica isenta de qualquer 
-                        responsabilidade sobre os mesmos.</p>
-                        <div class="dt-name">
-                            <div class="name">
-                                <p>Assinatura</p>
-                            </div><!-- name -->
-                        </div><!-- dt-name -->
-                    </div><!--desc-obs -->
-                </div><!-- damage-wrp -->
-                <div class="obs-f">
-                    <div class="obs-text">
-                        <h2>Observações</h2>
-                        <p>-</p>
-                        <p>-</p>
-                        <p>-</p>
-                    </div><!-- obs-text -->
-                </div><!-- obs-f -->
-                </div><!-- r-box -->
-            </div><!-- container -->
-        </section><!-- box -->
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="tireBack">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="tireBackcheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Tapetes</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="mat">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="matCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Relógio</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="oclock">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="oclockCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Antena</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="antenna">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="antennaCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Módulo</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="module">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="moduleCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Documentos</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="docs">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="docsCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>CD</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="cdisk">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="cdiskCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>DvD</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="dvd">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="dvdCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Porta CD</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="storecd">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="storecdCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Caixa Selada</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="boxseal">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="boxsealCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Toca-Fitas</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="playtape">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="playtapeCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Extintor</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="extinguisher">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="extinguisherCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Calotas</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="hubcap">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="hubcapCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Rodas</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="wheels">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="wheelsCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Console</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="console">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="consoleCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                    <div class="real-desc">
+                        <div class="name-60">
+                            <p>Rádio</p>
+                        </div><!-- name-60 -->
+                        <div class="select-20">
+                            <select name="select" id="radio">
+                                <option value="-" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div><!-- select-20 -->
+                        <div class="select-20">
+                            <select name="select" id="radioCheck">
+                                <option value="-" disabled selected>Padrão</option>
+                                <option value="Bom">Bom</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Ruim">Ruim</option>
+                            </select>
+                        </div><!-- select-20 -->
+                    </div><!-- real-desc -->
+                </div><!-- wrapper-desc -->
+                <div class="input-description">
+                    <h2>Anotações</h2>
+                    <input type="text" id="descOne" placeholder="Anotação 01" autocomplete="off" maxlength="85"/>
+                    <input type="text" id="descTwo" placeholder="Anotação 02" autocomplete="off" maxlength="85"/>
+                    <input type="text" id="descThree" placeholder="Anotação 03" autocomplete="off" maxlength="85"/>
+                    <input type="text" id="descThree" placeholder="Anotação 04" autocomplete="off" maxlength="85"/>
+                </div><!-- input-description -->
+                <div class="input-button">
+                    <button id="printPdf">Salvar como PDF</button>
+                </div><!-- input-button -->
+            </div><!-- input-full -->
+        </div><!-- container -->
+    </section><!-- ticket-form -->
 </body>
 <script src="./js/jquery.js"></script>
+<script src="./js/jquery.mask.min.js"></script>
+<script src="./js/ldspdf.js"></script>
 <script src="./js/script.js"></script>
 </html>
