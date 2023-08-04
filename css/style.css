@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 2%;
+}
+
+section.box .container .r-box {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+section.box .container .r-box .header {
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+
+section.box .container .r-box .header .header-35 {
+    width: 35%;
+    position: relative;
+    top: 20px;
+}
+
+section.box .container .r-box .header .header-35 h2 {
+    font-size: 14px;
+    text-align: center;
+}
+
+section.box .container .r-box .header .header-35 .img-logo {
+    background-image: url(../assets/logo.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40px;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+section.box .container .r-box .header .header-30 {
+    width: 30%;
+    border-left: 1px solid black;
+    padding: 5px;
+}
+
+section.box .container .r-box .header .header-30 p {
+    font-size: 13px;
+    text-align: left;
+}
+
+section.box .container .r-box .table-names {
+    width: 100%;
+}
+
+section.box .container .r-box .table-names p {
+    font-size: 13px;
+}
+
+section.box .container .r-box .table-names .first-line .name-100 {
+    width: 100%;
+    padding: 5px;
+}
+
+section.box .container .r-box .table-names .second-line .name-25 {
+    width: 25%;
+    padding: 5px;
+}
+
+section.box .container .r-box .table-names .third-line .bname-25 {
+    width: 25%;
+    padding: 5px;
+}
+
+section.box .container .r-box .table-names .third-line .contact-50 {
+    width: 50%;
+    padding: 5px;
+}
+
+section.box .container .r-box .table-names .four-line .bname-100 {
+    width: 100%;
+    padding: 5px;
+}
+
+section.box .container .r-box .table-names .fifth-line .cname-100 {
+    width: 100%;
+    padding: 5px;
+}
+
+section.box .container .r-box .table-names .first-line, section.box .container .r-box .table-names .second-line,
+section.box .container .r-box .table-names .third-line, section.box .container .r-box .table-names .four-line,
+section.box .container .r-box .table-names .fifth-line {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+section.box .container .r-box .equipments {
+    width: 100%;
+}
+
+section.box .container .r-box .equipments .equipments-info h2 {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+section.box .container .r-box .menu-f {
+    width: 100%;
+    display: flex;
+}
+
+section.box .container .r-box .menu-f p {
+    font-size: 13px;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+section.box .container .r-box .menu-f h2 {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+section.box .container .r-box .menu-f .menu-50 {
+    width: 50%;
+    display: flex;
+    text-align: center;
+}
+
+section.box .container .r-box .menu-f .menu-50:nth-of-type(2) {
+    border-left: 1px solid black;
+}
+
+section.box .container .r-box .menu-f .menu-50 .title-12:nth-of-type(2) {
+    border-left: 1px solid black;
+}
+
+section.box .container .r-box .menu-f .menu-50 .title-25:nth-of-type(4) {
+    border-left: 1px solid black;
+}
+
+section.box .container .r-box .menu-f .menu-50 .title-25 {
+    width: 50%;
+}
+
+section.box .container .r-box .menu-f .menu-50 .title-12 {
+    width: 25%;
+}
+
+section.box .container .r-box .damage-wrp {
+    width: 100%;
+    display: flex;
+}
+
+section.box .container .r-box .damage-wrp .damages {
+    width: 50%;
+    padding: 5px;
+}
+
+section.box .container .r-box .damage-wrp h2 {
+    font-size: 12px;
+    text-align: center;
+}
+
+section.box .container .r-box .damage-wrp .damages-img {
+    width: 100%;
+    background-image: url(../assets/cars.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    padding-top: 170px;
+    margin-top: 10px;
+}
+
+section.box .container .r-box .damage-wrp .desc-obs {
+    width: 50%;
+    padding: 5px;
+    display: inline-block;
+    border-left: 1px solid black;
+}
+
+section.box .container .r-box .damage-wrp .desc-obs p {
+    text-align: justify;
+    font-size: 13px;
+    margin-top: 12px;
+    padding: 0px 20px;
+}
+
+section.box .container .r-box .damage-wrp .dt-name {
+    width: 80%;
+    display: flex;
+    border-top: 1px solid black;
+    margin: 40px auto 0px;
+}
+
+section.box .container .r-box .damage-wrp .dt-name p {
+    text-align: center;
+}
+
+section.box .container .r-box .damage-wrp .dt-name .name {
+    width: 100%;
+}
+
+section.box .container .r-box .obs-f {
+    width: 100%;
+    display: inline-block;
+}
+
+section.box .container .r-box .obs-f .obs-text {
+    border-top: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+section.box .container .r-box .obs-f .obs-text h2 {
+    font-size: 14px;
+}
+
+section.box .container .r-box .obs-f .obs-text p {
+    text-align: justify;
+    font-size: 13px;
+    padding: 0 20px;
+}
