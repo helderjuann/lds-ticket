@@ -1,5 +1,10 @@
-function ticketPdf(nameClient, addressName, docCPF, docCNPJ, carName, carLicence, servicesOne, 
-    servicesTwo, servicesThree, priceTotal, priceOne, priceTwo, priceThree, descOne, descTwo, descThree) {
+function ticketPdf(driverName, drivercarName, insureCar, clientName, clientCPF, carMark, carModel, carLicence, carType, carColor, carKm, 
+        carAddress, carStop, localContact, seatFront, seatFrontcheck, seatBack, seatBackcheck, keys, keysCheck, gloveBox, gloveBoxcheck, 
+        trunk, trunkCheck, crankcase, crankcaseCheck, carLights, carLightscheck, removeFront, removeFrontcheck, bagbag, bagbagCheck, steppe, 
+        steppeCheck, monkey, monkeyCheck, triangle, triangleCheck, tools, toolsCheck, insulfilm, insulfilmCheck, babychair, babychairCheck, 
+        tireFront, tireFrontcheck, tireBack, tireBackcheck, mat, matCheck, oclock, oclockCheck, antenna, antennaCheck, module, moduleCheck, 
+        docs, docsCheck, cdisk, cdiskCheck, dvd, dvdCheck, storecd, storecdCheck, boxseal, boxsealCheck, playtape, playtapeCheck, extinguisher, 
+        extinguisherCheck, hubcap, hubcapCheck, wheels, wheelsCheck, console, consoleCheck, radio, radioCheck, notesOne, notesTwo, notesThree, notesFour) {
       const timeElapsed = Date.now();
       const today = new Date(timeElapsed);
   
@@ -296,54 +301,54 @@ function ticketPdf(nameClient, addressName, docCPF, docCNPJ, carName, carLicence
                       <h2>Acompanhado pelo cliente ou responsável</h2>
                   </div><!-- header-35 -->
                   <div class="header-30">
-                      <p>Horário:</p>
-                      <p>Motorista:</p>
-                      <p>Veículo:</p>
-                      <p>Seguradora:</p>
+                      <p>Horário: ${new Date().toLocaleString('pt-BR', { hour: 'numeric', minute: 'numeric' })}</p>
+                      <p>Motorista: ${driverName}</p>
+                      <p>Veículo: ${drivercarName}</p>
+                      <p>Seguradora: ${insureCar}</p>
                   </div><!-- header-30-->
               </div><!-- header -->
               <div class="table-names">
                   <div class="first-line">
                       <div class="name-70">
-                          <p>Nome:</p>
+                          <p>Nome: ${clientName}</p>
                       </div><!-- name-70 -->
                       <div class="name-30">
-                          <p>CPF:</p>
+                          <p>CPF: ${clientCPF}</p>
                       </div><!-- name-30 -->
                   </div><!-- first-line -->
                   <div class="second-line">
                       <div class="name-25">
-                          <p>Placa:</p>
+                          <p>Placa: ${carLicence}</p>
                       </div><!-- name-25 -->
                       <div class="name-25">
-                          <p>Marca:</p>
+                          <p>Marca: ${carMark}</p>
                       </div><!-- name-25 -->
                       <div class="name-25">
-                          <p>Modelo:</p>
+                          <p>Modelo: ${carModel}</p>
                       </div><!-- name-25 -->
                       <div class="name-25">
-                          <p>Tipo:</p>
+                          <p>Tipo: ${carType}</p>
                       </div><!-- name-25 -->
                   </div><!-- second-line -->
                   <div class="third-line">
                       <div class="bname-25">
-                          <p>Cor:</p>
+                          <p>Cor: ${carColor}</p>
                       </div><!-- bname-25 -->
                       <div class="bname-25">
-                          <p>KM:</p>
+                          <p>KM: ${carKm}</p>
                       </div><!-- bname-25 -->
                       <div class="contact-50">
-                          <p>Contato Local:</p>
+                          <p>Contato Local: ${localContact}</p>
                       </div><!-- contact-50 -->
                   </div><!-- third-line -->
                   <div class="four-line">
                       <div class="bname-100">
-                          <p>Localização do veículo:</p>
+                          <p>Localização do veículo: ${carAddress}</p>
                       </div><!-- name-100 -->
                   </div><!-- four-line -->
                   <div class="fifth-line">
                       <div class="cname-100">
-                          <p>Local de destino:</p>
+                          <p>Local de destino: ${carStop}</p>
                       </div><!-- name-100 -->
                   </div><!-- fifth-line -->
               </div><!-- table-names -->
@@ -558,10 +563,10 @@ function ticketPdf(nameClient, addressName, docCPF, docCNPJ, carName, carLicence
               <div class="obs-f">
                   <div class="img-fuel"></div><!-- img-fuel -->
                   <div class="obs-text">
-                      <p>-</p>
-                      <p>-</p>
-                      <p>-</p>
-                      <p>-</p>
+                      <p>-> ${notesOne}</p>
+                      <p>-> ${notesTwo}</p>
+                      <p>-> ${notesThree}</p>
+                      <p>-> ${notesFour}</p>
                   </div><!-- obs-text -->
               </div><!-- obs-f -->
               </div><!-- r-box -->
@@ -594,22 +599,94 @@ function ticketPdf(nameClient, addressName, docCPF, docCNPJ, carName, carLicence
   
   const printPdf = document.querySelector('#printPdf');
   printPdf.addEventListener('click', (event) => {
-    const nameClient = document.querySelector('#nameClient').value;
-    const addressName = document.querySelector('#addressName').value;
-    const docCPF = document.querySelector('#docCPF').value;
-    const docCNPJ = document.querySelector('#docCNPJ').value;
-    const carName = document.querySelector('#carName').value;
+    const driverName = document.querySelector('#driverName').value;
+    const drivercarName = document.querySelector('#drivercarName').value;
+    const insureCar = document.querySelector('#insureCar').value;
+    const clientName = document.querySelector('#clientName').value;
+    const clientCPF = document.querySelector('#clientCPF').value;
+    const carMark = document.querySelector('#carMark').value;
+    const carModel = document.querySelector('#carModel').value;
     const carLicence = document.querySelector('#carLicence').value;
-    const servicesOne = document.querySelector('#servicesOne').value;
-    const servicesTwo = document.querySelector('#servicesTwo').value;
-    const servicesThree = document.querySelector('#servicesThree').value;
-    const priceOne = Number(document.querySelector('#priceOne').value);
-    const priceTwo = Number(document.querySelector('#priceTwo').value);
-    const priceThree = Number(document.querySelector('#priceThree').value);
-    const priceTotal = priceOne + priceTwo + priceThree;
-    const descOne = document.querySelector('#descOne').value;
-    const descTwo = document.querySelector('#descTwo').value;
-    const descThree = document.querySelector('#descThree').value;
-    ticketPdf(nameClient, addressName, docCPF, docCNPJ, carName, carLicence, servicesOne, servicesTwo, 
-    servicesThree, priceTotal, priceOne, priceTwo, priceThree, descOne, descTwo, descThree);
+    const carType = document.querySelector('#carType').value;
+    const carColor = document.querySelector('#carColor').value;
+    const carKm = document.querySelector('#carKm').value;
+    const carAddress = document.querySelector('#carAddress').value;
+    const carStop = document.querySelector('#carStop').value;
+    const localContact = document.querySelector('#localContact').value;
+    const seatFront = document.querySelector('#seatFront').value;
+    const seatFrontcheck = document.querySelector('#seatFrontcheck').value;
+    const seatBack = document.querySelector('#seatBack').value;
+    const seatBackcheck = document.querySelector('#seatBackcheck').value;
+    const keys = document.querySelector('#keys').value;
+    const keysCheck = document.querySelector('#keysCheck').value;
+    const gloveBox = document.querySelector('#gloveBox').value;
+    const gloveBoxcheck = document.querySelector('#gloveBoxcheck').value;
+    const trunk = document.querySelector('#trunk').value;
+    const trunkCheck = document.querySelector('#trunkCheck').value;
+    const crankcase = document.querySelector('#crankcase').value;
+    const crankcaseCheck = document.querySelector('#crankcaseCheck').value;
+    const carLights = document.querySelector('#carLights').value;
+    const carLightscheck = document.querySelector('#carLightscheck').value;
+    const removeFront = document.querySelector('#removeFront').value;
+    const removeFrontcheck = document.querySelector('#removeFrontcheck').value;
+    const bagbag = document.querySelector('#bagbag').value;
+    const bagbagCheck = document.querySelector('#bagbagCheck').value;
+    const steppe = document.querySelector('#steppe').value;
+    const steppeCheck = document.querySelector('#steppeCheck').value;
+    const monkey = document.querySelector('#monkey').value;
+    const monkeyCheck = document.querySelector('#monkeyCheck').value;
+    const triangle = document.querySelector('#triangle').value;
+    const triangleCheck = document.querySelector('#triangleCheck').value;
+    const tools = document.querySelector('#tools').value;
+    const toolsCheck = document.querySelector('#toolsCheck').value;
+    const insulfilm = document.querySelector('#insulfilm').value;
+    const insulfilmCheck = document.querySelector('#insulfilmCheck').value;
+    const babychair = document.querySelector('#babychair').value;
+    const babychairCheck = document.querySelector('#babychairCheck').value;
+    const tireFront = document.querySelector('#tireFront').value;
+    const tireFrontcheck = document.querySelector('#tireFrontcheck').value;
+    const tireBack = document.querySelector('#tireBack').value;
+    const tireBackcheck = document.querySelector('#tireBackcheck').value;
+    const mat = document.querySelector('#mat').value;
+    const matCheck = document.querySelector('#matCheck').value;
+    const oclock = document.querySelector('#oclock').value;
+    const oclockCheck = document.querySelector('#oclockCheck').value;
+    const antenna = document.querySelector('#antenna').value;
+    const antennaCheck = document.querySelector('#antennaCheck').value;
+    const module = document.querySelector('#module').value;
+    const moduleCheck = document.querySelector('#moduleCheck').value;
+    const docs = document.querySelector('#docs').value;
+    const docsCheck = document.querySelector('#docsCheck').value;
+    const cdisk = document.querySelector('#cdisk').value;
+    const cdiskCheck = document.querySelector('#cdiskCheck').value;
+    const dvd = document.querySelector('#dvd').value;
+    const dvdCheck = document.querySelector('#dvdCheck').value;
+    const storecd = document.querySelector('#storecd').value;
+    const storecdCheck = document.querySelector('#storecdCheck').value;
+    const boxseal = document.querySelector('#boxseal').value;
+    const boxsealCheck = document.querySelector('#boxsealCheck').value;
+    const playtape = document.querySelector('#playtape').value;
+    const playtapeCheck = document.querySelector('#playtapeCheck').value;
+    const extinguisher = document.querySelector('#extinguisher').value;
+    const extinguisherCheck = document.querySelector('#extinguisherCheck').value;
+    const hubcap = document.querySelector('#hubcap').value;
+    const hubcapCheck = document.querySelector('#hubcapCheck').value;
+    const wheels = document.querySelector('#wheels').value;
+    const wheelsCheck = document.querySelector('#wheelsCheck').value;
+    const console = document.querySelector('#console').value;
+    const consoleCheck = document.querySelector('#consoleCheck').value;
+    const radio = document.querySelector('#radio').value;
+    const radioCheck = document.querySelector('#radioCheck').value;
+    const notesOne = document.querySelector('#notesOne').value;
+    const notesTwo = document.querySelector('#notesTwo').value;
+    const notesThree = document.querySelector('#notesThree').value;
+    const notesFour = document.querySelector('#notesFour').value;
+
+    ticketPdf(driverName, drivercarName, insureCar, clientName, clientCPF, carMark, carModel, carLicence, carType, carColor, carKm, 
+    carAddress, carStop, localContact, seatFront, seatFrontcheck, seatBack, seatBackcheck, keys, keysCheck, gloveBox, gloveBoxcheck, 
+    trunk, trunkCheck, crankcase, crankcaseCheck, carLights, carLightscheck, removeFront, removeFrontcheck, bagbag, bagbagCheck, steppe, 
+    steppeCheck, monkey, monkeyCheck, triangle, triangleCheck, tools, toolsCheck, insulfilm, insulfilmCheck, babychair, babychairCheck, 
+    tireFront, tireFrontcheck, tireBack, tireBackcheck, mat, matCheck, oclock, oclockCheck, antenna, antennaCheck, module, moduleCheck, 
+    docs, docsCheck, cdisk, cdiskCheck, dvd, dvdCheck, storecd, storecdCheck, boxseal, boxsealCheck, playtape, playtapeCheck, extinguisher, 
+    extinguisherCheck, hubcap, hubcapCheck, wheels, wheelsCheck, console, consoleCheck, radio, radioCheck, notesOne, notesTwo, notesThree, notesFour);
   });
