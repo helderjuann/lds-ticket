@@ -42,11 +42,11 @@
                         </div><!-- input-50 -->
                         <div class="input-50">
                             <h2>CPF do Cliente</h2>
-                            <input type="text" id="clientCPF" placeholder="CPF do Cliente" autocomplete="off"/>
+                            <input class="cpf" type="text" id="clientCPF" placeholder="CPF do Cliente" autocomplete="off"/>
                         </div><!-- input-50 -->
                     </div><!-- input-100 -->
                 </div><!-- input-client -->
-                <div class="input-licence">
+                <div class="input-mark">
                     <div class="input-100">
                         <div class="input-50">
                             <h2>Marca</h2>
@@ -57,8 +57,8 @@
                             <input type="text" id="carModel" placeholder="Modelo do Veículo" autocomplete="off" maxlength="15"/>
                         </div><!-- input-50 -->
                     </div><!-- input-100 -->
-                </div><!-- input-licence -->
-                <div class="input-km">
+                </div><!-- input-mark -->
+                <div class="input-licence">
                     <div class="input-100">
                         <div class="input-50">
                             <h2>Placa</h2>
@@ -69,6 +69,18 @@
                             <input type="text" id="carType" placeholder="Tipo do Veículo" autocomplete="off"/>
                         </div><!-- input-50 -->
                     </div><!-- input-100 -->
+                </div><!-- input-licence -->
+                <div class="input-km">
+                    <div class="input-100">
+                        <div class="input-50">
+                            <h2>Cor</h2>
+                            <input type="text" id="carColor" placeholder="Cor do Veículo" autocomplete="off"/>
+                        </div><!-- input-50 -->
+                        <div class="input-50">
+                            <h2>KM</h2>
+                            <input class="kmkm" type="text" id="carKm" placeholder="KM do Veículo" autocomplete="off"/>
+                        </div><!-- input-50 -->
+                    </div><!-- input-100 -->
                 </div><!-- input-km -->
                 <div class="input-address">
                     <h2>Localização do Veículo</h2>
@@ -76,7 +88,7 @@
                     <h2>Destino do Veículo</h2>
                     <input type="text" id="carStop" placeholder="Destino para deixar o Veículo" autocomplete="off"/>
                     <h2>Contato Local</h2>
-                    <input type="text" id="localContact" placeholder="Nome de alguém no local" autocomplete="off"/>
+                    <input type="text" id="localContact" placeholder="Nome de alguém no Local" autocomplete="off"/>
                 </div><!-- input-address -->
                 <div class="text-wrapper">
                         <h2>Vistoria</h2>
@@ -727,10 +739,10 @@
                 </div><!-- wrapper-desc -->
                 <div class="input-description">
                     <h2>Anotações</h2>
-                    <input type="text" id="descOne" placeholder="Anotação 01" autocomplete="off" maxlength="85"/>
-                    <input type="text" id="descTwo" placeholder="Anotação 02" autocomplete="off" maxlength="85"/>
-                    <input type="text" id="descThree" placeholder="Anotação 03" autocomplete="off" maxlength="85"/>
-                    <input type="text" id="descThree" placeholder="Anotação 04" autocomplete="off" maxlength="85"/>
+                    <input type="text" id="notesOne" placeholder="Anotação 01" autocomplete="off" maxlength="85"/>
+                    <input type="text" id="notesTwo" placeholder="Anotação 02" autocomplete="off" maxlength="85"/>
+                    <input type="text" id="notesThree" placeholder="Anotação 03" autocomplete="off" maxlength="85"/>
+                    <input type="text" id="notesFour" placeholder="Anotação 04" autocomplete="off" maxlength="85"/>
                 </div><!-- input-description -->
                 <div class="input-button">
                     <button id="printPdf">Salvar como PDF</button>
