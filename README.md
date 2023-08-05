@@ -1,5 +1,9 @@
 # lds-ticket
 
+
+Sistema de Recibo para a empresa EstetPARK <br>
+
+
 Laudo de Socorro feito com JavaScript e JQuery <br><br>
-Terminar o Script e impressão mobile/desktop <br>
-Atualizar tudo no dia 05/08 (Amanhã)
+Terminar o Script e impressão mobile/desktop <br><br>
+Atualizei o que precisava, mas ainda preciso melhorar
