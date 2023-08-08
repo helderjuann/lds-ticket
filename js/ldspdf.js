@@ -1,3 +1,5 @@
+$(function() {
+
 function ticketPdf(driverName, drivercarName, insureCar, clientName, clientCPF, carMark, carModel, carLicence, carType, carColor, carKm, 
         carAddress, carStop, localContact, seatFront, seatFrontcheck, seatBack, seatBackcheck, keys, keysCheck, gloveBox, gloveBoxcheck, 
         trunk, trunkCheck, crankcase, crankcaseCheck, carLights, carLightscheck, removeFront, removeFrontcheck, bagbag, bagbagCheck, steppe, 
@@ -664,3 +666,5 @@ function ticketPdf(driverName, drivercarName, insureCar, clientName, clientCPF, 
     docs, docsCheck, cdisk, cdiskCheck, dvd, dvdCheck, storecd, storecdCheck, boxseal, boxsealCheck, playtape, playtapeCheck, extinguisher, 
     extinguisherCheck, hubcap, hubcapCheck, wheels, wheelsCheck, console, consoleCheck, radio, radioCheck, notesOne, notesTwo, notesThree, notesFour, fuelAmt);
   });
+
+});
